@@ -6,6 +6,8 @@ const StudentForm = () => {
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
   const [phone, setPhone] = useState("");
+  // State for form submission
+  const [isSubmit, setIsSubmit] = useState(false);
 
   // Form Validation
   const validate = () => {
@@ -53,6 +55,7 @@ const StudentForm = () => {
       setAge("");
       setPhone("");
       setError({});
+      setIsSubmit(true);
     }
   };
 
@@ -69,7 +72,9 @@ const StudentForm = () => {
           placeholder="Enter your name"
           onChange={(e) => setName(e.target.value)}
         />
-        {error.name && <p style={{ color: "red", fontWeight: "bold" }}>{error.name}</p>}
+        {error.name && (
+          <p style={{ color: "red", fontWeight: "bold" }}>{error.name}</p>
+        )}
         <br />
         <br />
 
@@ -82,7 +87,9 @@ const StudentForm = () => {
           placeholder="Enter your age"
           onChange={(e) => setAge(e.target.value)}
         />
-        {error.age && <p style={{ color: "red", fontWeight: "bold" }}>{error.age}</p>}
+        {error.age && (
+          <p style={{ color: "red", fontWeight: "bold" }}>{error.age}</p>
+        )}
         <br />
         <br />
 
@@ -95,11 +102,22 @@ const StudentForm = () => {
           placeholder="Enter your phone number"
           onChange={(e) => setPhone(e.target.value)}
         />
-        {error.phone && <p style={{ color: "red", fontWeight: "bold" }}>{error.phone}</p>}
+        {error.phone && (
+          <p style={{ color: "red", fontWeight: "bold" }}>{error.phone}</p>
+        )}
         <br />
         <br />
 
-        <button type="submit">Submit</button>
+        {/* Ternary Operator Cnditional rendering */}
+        {isSubmit ? (
+          <button type="submit">Submitted</button>
+        ) : (
+          <button type="submit">Submit</button>
+        )}
+
+        {/* Logical operator && */}
+
+        {isSubmit && <p>Your Form has been submnitted</p>}
       </form>
     </div>
   );
