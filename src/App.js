@@ -6,6 +6,7 @@ import PracticeEvents from "./components/events/PracticeEvents";
 import StudentForm from "./components/formValidation/StudentForm";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
+import TestCompo from "./components/TestCompo";
 let myName = "Nida Waseem";
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
       {/* <CheckEventTest />
       <PracticeEvents /> */}
       <StudentForm />
+
+      <TestCompo />
     </div>
   );
 }
