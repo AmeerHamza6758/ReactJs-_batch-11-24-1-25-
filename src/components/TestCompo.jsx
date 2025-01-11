@@ -8,7 +8,7 @@ function TestCompo() {
     <div>
       <h1>Context Data Sharing</h1>
       <p>This is a component using the MyContext.</p>
-      <h1>{contextValue}</h1>
+      <h1>{contextValue}</h1> 
     </div>
   );
 }
