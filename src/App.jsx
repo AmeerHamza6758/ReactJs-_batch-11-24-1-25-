@@ -18,12 +18,13 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <CompA/>
       {/* <Products /> */}
-      <Routes>
+      {/* <Routes>
         <Route path="/" element={<UserList />} />
         <Route path="/sales" element={<Sales />} />
         <Route path="/products" element={<Products />} />
-      </Routes>
+      </Routes> */}
       {/* <StudentForm /> */}
     </div>
   );
