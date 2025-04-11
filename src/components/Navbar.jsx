@@ -1,17 +1,20 @@
-import React, { Fragment, useState } from "react";
-import "./style.css";
-import Home from "./Home";
-function Navbar({myName}) {
-  const [teacher, setTeacher] = useState("Ameer Hamza Teacher");
-  return (
-    <Fragment>
-      <div style={{backgroundColor:"yellowgreen"}}>
-        <h1>Hello {myName}</h1>
-        <div>Hello this is navbar From {myName}</div>
-      </div>
-      <Home teacherName={teacher}/>
-    </Fragment>
-  );
-}
+import React from "react"
+import catImage from '../assets/download.jpeg';
+import { Link } from "react-router";
 
-export default Navbar;
+function Navbar() {
+    return (
+        <div style={{ fontSize: '30px', backgroundColor: 'yellow' }}>
+            <ul style={{ listStyle: 'none', display: 'flex', gap: '30px' }}>
+                <Link to='/'><li>Home</li></Link>
+                <Link to='sales'> <li>Sale</li></Link>
+                <Link to='/products'><li>Products</li></Link>
+                <li>Contact_US</li>
+                <li>About_Us</li>
+            </ul>
+            {/* <img src={catImage} alt="Cat Image" /> */}
+        </div>
+    )
+
+}
+export default Navbar

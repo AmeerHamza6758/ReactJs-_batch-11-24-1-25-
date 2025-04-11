@@ -1,12 +1,11 @@
-import React from "react";
-import myPic from "../assets/download.jpeg";
-function Home({ teacherName}) {
+import React, { useContext } from 'react'
+import { MyContext } from '../services/MyContext'
+
+function Home() {
+  const { name, email } = useContext(MyContext)
   return (
-    <div style={{ backgroundColor: "red" }}>
-      <p>Helo Sweet Home of {teacherName}</p>
-      <img src={myPic} alt="Icon" />
-    </div>
-  );
+    <div>This is HOME page {name} and email is:{email}</div>
+  )
 }
 
-export default Home;
+export default Home
